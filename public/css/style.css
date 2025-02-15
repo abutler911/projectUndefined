@@ -1,3 +1,78 @@
 body {
-  font-family: "Roboto Flex", serif;
+  font-family: "Roboto Flex", sans-serif;
+  background-color: #f8f9fa;
+  padding-top: 70px;
+}
+
+.navbar-brand {
+  font-family: monospace;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.content {
+  line-height: 1.6;
+}
+
+footer a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #adb5bd !important;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/hero-bg.jpg") center/cover no-repeat;
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+}
+
+/* Category Boxes */
+.category-box {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #ddd;
+}
+
+.category-box:hover {
+  background-color: #343a40;
+  color: white;
+  transform: scale(1.05);
+}
+
+.category-box a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.category-box a:hover {
+  text-decoration: underline;
+}
+
+/* Blog Cards */
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CTA Section */
+section.text-center {
+  padding: 40px 0;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 56px;
+  }
+
+  .hero {
+    padding: 80px 0;
+  }
 }

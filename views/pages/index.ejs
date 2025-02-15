@@ -1,0 +1,72 @@
+<!-- Hero Section -->
+<section class="hero text-center text-light py-5 mb-4">
+  <div class="container">
+    <h1 class="display-4">Welcome to Project:Undefined();</h1>
+    <p class="lead">
+      A blog about <strong>coding, aviation, consulting, and life.</strong>
+    </p>
+    <a href="/blog" class="btn btn-lg btn-outline-light mt-3">Explore Blog</a>
+  </div>
+</section>
+
+<!-- Featured Posts -->
+<section class="container mb-5">
+  <h2 class="mb-4 text-center">Featured Posts</h2>
+  <div class="row">
+    <% if (posts.length === 0) { %>
+    <p class="text-center">No posts available. Check back soon!</p>
+    <% } else { %> <% posts.slice(0, 3).forEach(post => { %>
+    <div class="col-md-4">
+      <div class="card shadow-sm">
+        <img
+          src="<%= post.image %>"
+          class="card-img-top"
+          alt="<%= post.title %>"
+        />
+        <div class="card-body">
+          <h5 class="card-title"><%= post.title %></h5>
+          <p class="card-text"><%= post.excerpt %></p>
+          <a href="/blog/<%= post.slug %>" class="btn btn-dark btn-sm"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </div>
+    <% }); %> <% } %>
+  </div>
+  <div class="text-center mt-4">
+    <a href="/blog" class="btn btn-outline-dark">View All Posts</a>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="container mb-5">
+  <h2 class="mb-4 text-center">Explore Categories</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="category-box p-4 text-center rounded bg-light">
+        <h4><a href="/blog/category/coding">Coding</a></h4>
+        <p>Web dev, JavaScript, and everything in between.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-box p-4 text-center rounded bg-light">
+        <h4><a href="/blog/category/aviation">Aviation</a></h4>
+        <p>Stories from the cockpit and flying tips.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="category-box p-4 text-center rounded bg-light">
+        <h4><a href="/blog/category/life">Life & Consulting</a></h4>
+        <p>Lessons from business, consulting, and beyond.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action -->
+<section class="text-center my-5">
+  <h2>Stay Updated with the Latest Posts</h2>
+  <p>Subscribe to get new articles delivered straight to your inbox.</p>
+  <a href="/subscribe" class="btn btn-dark btn-lg">Subscribe</a>
+</section>
